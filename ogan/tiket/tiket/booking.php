@@ -17,7 +17,7 @@
             <div class="col s7">
                 <div class="card-panel">
                     <h3>Customer</h3>
-                    <form method="post" action="pesan_p.php">
+                    <form method="post" action="pesan_p.php" enctype="multipart/form-data">
                         <div class="input-field">
                             <?php
                             $rang = range(1, 9);
@@ -48,7 +48,7 @@
                                 $sqt = mysqli_query($conn, 'select * from trans where id_trans="'.$qur['id_trans'].'" ');
                                 $qut = mysqli_fetch_array($sqt);
                                 ?>
-                                    <input type="text" name="seat" id="phone" value="<?=$qut['seat'];?>">
+                                    <input type="text" name="seat" id="phone" value="<?=$qut['seat'];?>" >
                                     <label for="phone">Kode Kursi</label>
                             </div>
                             <div class="input-field">
@@ -82,6 +82,12 @@
                                 <label for="ir">ID Rute</label>
                             </div>
                             <div class="input-field">
+                            <label for="py">Bukti pembayaran</label>
+
+                                <input type="file" name="pay" id="py" required>
+                                
+                            </div>
+                            <div class="input-field" style="visibility: hidden;">
                                 <input type="text" name="status" id="status" value="Proses" class="disabled">
                                 <label for="status">Status</label>
                             </div>

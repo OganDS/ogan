@@ -122,17 +122,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
                                 }
                                 ?>
                                 <br>
-                                <button class="open-button" title="Kirim Bukti Pembayaran" onclick="openForm()"></button>
+                                <a href="#myForm?id_reserv=<?=$query['id_reserv'];?>"><button class="open-button" title="Kirim Bukti Pembayaran" onclick="openForm()"></button></a>
 
                                 <div class="form-popup" id="myForm">
-                                  <form action="/action_page.php" class="form-container">
-                                    <h1>Login</h1>
+                                <form action="pay_p.php" class="form-container" enctype="multipart/form-data" >
+                                    <h1>pembayaran</h1>
 
-                                    <label for="email"><b>Bukti pembayaran</b></label>
+                                    <label for="foto"><b>Bukti pembayaran</b></label>
                                     <input type="file" name="pay" required>
                                 <br><br>
 
-                                    <button type="submit" class="btn">Login</button>
+                                    <button type="submit" class="btn">kirim</button>
                                     <button type="button" class="btn cancel" onclick="closeForm()">X</button>
                                   </form>
                                 </div>

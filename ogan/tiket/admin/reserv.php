@@ -14,26 +14,26 @@
 
     <div class="container">
         <div class="row">
-            <div class="col s12">
+            <div class="col s15">
                 <br>
                 <br>
                 <div class="card-panel white-text blue">
                     <h5>Reservation</h5>
-                    <table>
+                    <table id="datatablesSimple">
                         <thead style="background-color: rgba(0, 0, 0, 0.25);" class="white-text">
                             <tr>
-                                
-                                <td>Code Reservation</td>
-                                <td>Reservation At</td>
-                                <td>Reservation Date</td>
-                                <td>Code Seat</td>
-                                <td>Depart</td>
-                                <td>Price</td>
-                                <td>User</td>
-                                <td>ID Customer</td>
-                                <td>ID Rute</td>
-                                <td>Status</td>
-                                <td>Action</td>
+                                <th>Code Reservation</th>
+                                <th>Reservation At</th>
+                                <th>Reservation Date</th>
+                                <th>Code Seat</th>
+                                <th>Depart</th>
+                                <th>Price</th>
+                                <th>User</th>
+                                <th>ID Customer</th>
+                                <th>ID Rute</th>
+                                <th> Bukti Pembayaran</th>
+                                <th>Status</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody class="white-text">
@@ -77,6 +77,9 @@
                                     <?=$dtt['id_rute'];?>
                                 </td>
                                 <td>
+                                <img src="../image/<?php echo $dtt['pay']?>" width="50" height="60">
+                                </td>
+                                <td>
                                     <?php 
                                     if($dtt['status']=='Proses') {
                                     ?>
@@ -102,6 +105,8 @@
         </div>
         <a style="" href="user.php"><button class="btn waves-effect blue">User</button></a>
         <a href="index.php" onclick="window.close();"><button class="btn waves-effect red"><i class="ion-close"></i></button></a>    
+        <!-- <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="../js/data-tables-simple.js"></script> -->
 </body>
 
 </html>

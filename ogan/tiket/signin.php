@@ -28,13 +28,13 @@
                         <div class="input-field">
                             <input type="text" name="username" id="user" required placeholder=""
                             oninvalid="this.setCustomValidity('Enter Username')"
-                            oninput="this.setCustomValidity('')"/>
+                            oninput="this.setCustomValidity('')" autocomplete="off"/>
                             <label for="user">Username</label>
                         </div>
                         <div class="input-field">
                             <input type="password" name="password" id="pass" required placeholder=""
                             oninvalid="this.setCustomValidity('Enter Password')"
-                            oninput="this.setCustomValidity('')"/>
+                            oninput="this.setCustomValidity('')" autocomplete="off"/>
                             <label for="pass">Password</label>
                         </div>
                         <a href="signin_p.php" title="masuk"><button class="btn waves-effect">Login  <i class="ion-log-in"></i></button></a>

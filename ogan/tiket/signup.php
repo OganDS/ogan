@@ -28,19 +28,19 @@
                         <div class="input-field">
                             <input type="text" name="username" id="user" required placeholder=""
                             oninvalid="this.setCustomValidity('Enter Username')"
-                            oninput="this.setCustomValidity('')"/>
+                            oninput="this.setCustomValidity('')" autocomplete="off"/>
                             <label for="user">Username</label>
                         </div>
                         <div class="input-field">
                             <input type="password" name="password" id="pass" required placeholder=""
                             oninvalid="this.setCustomValidity('Enter Password')"
-                            oninput="this.setCustomValidity('')"/>
+                            oninput="this.setCustomValidity('')" autocomplete="off"/>
                             <label for="pass">Password</label>
                         </div>
                         <div class="input-field">
                             <input type="text" name="fullname" id="full" required placeholder=""
                             oninvalid="this.setCustomValidity('Enter Fullname')"
-                            oninput="this.setCustomValidity('')"/>
+                            oninput="this.setCustomValidity('')" autocomplete="off"/>
                             <label for="full">Fullname</label>
                         </div>
                         <a href="signup_p.php" style="font-family: segoe ui light;"><button class="btn waves-effect blue">Sign Up  <i class="ion-android-person-add"></i></button></a>
